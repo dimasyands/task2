@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1">
+  <title>Viseven Task-2</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <section class="main-screen">
+    <section class="sky">
+      <div class="sky-stars"></div>
+      <div class="sky-north"></div>
+    </section>
+    <div class="wave1">
+      <img src="images/wave1.png">
+    </div>
+    <div class="ice">
+      <div class="ice-wrapper">
+        <img src="images/iceDown.png">
+        <img src="images/iceUp.png">
+      </div>
+    </div>
+    <div class="wave2">
+        <img src="images/wave2.png">
+    </div>
+    <div class="boat">
+      <div class="boat-wrapper">
+        <img src="images/boat.png">
+        <div class="bubble">
+          <div class="bubble-wrapper">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/firework.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rocket-wrapper">
+      <div class="rocket">
+        <img src="images/rocket.png">
+      </div>
+      <div class="boom">
+        <img src="images/boom.svg">
+      </div>
+    </div>
+
+    <div class="cat">
+      <img src="images/cat.png">
+    </div>
+
+    <div class="popup">
+      <h1>Врятуймо Титанік!</h1>
+      <p>краще пізно, ніж ніколи...</p>
+    </div>
+
+    <div class="popup2">
+      <h1>Титанік має померти!</h1>
+    </div>
+
+    </section>
+
+    <script>
+      document.querySelector('.boat').addEventListener('click', boatAction);
+      document.querySelector('.ice').addEventListener('click', iceAction);
+
+      function boatAction() {
+        const rocket =  document.querySelector('.rocket-wrapper');
+        const boom =  document.querySelector('.boom')
+        const iceboom = document.querySelector('.ice-wrapper')
+        const popup = document.querySelector('.popup')
+        const boatleave = document.querySelector('.boat-wrapper')
+        boatleave.classList.toggle('boatleave')
+        rocket.classList.toggle('rocket-go');
+        boom.classList.toggle('boom-go');
+        iceboom.classList.toggle('ice-boom');
+        popup.classList.toggle('popup-go');
+      };
+
+      function iceAction() {
+        const rocket =  document.querySelector('.rocket-wrapper');
+        const boom =  document.querySelector('.boom')
+        const popup2 = document.querySelector('.popup2')
+        const boatleave = document.querySelector('.boat-wrapper')
+        const catgo = document.querySelector('.cat')
+        boatleave.classList.toggle('boatleave')
+        rocket.classList.toggle('rocket-go');
+        boom.classList.toggle('boom-go');
+        popup2.classList.toggle('popup-go');
+        catgo.classList.toggle('cat-go');
+      };
+
+    </script>
+</body>
+</html>
